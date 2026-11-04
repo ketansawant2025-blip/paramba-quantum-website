@@ -67,7 +67,7 @@ function VoiceDemo() {
   const fmt = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
   const label = ({ready:'Ready to start', connecting:'Connecting to your AI assistant…', listening:'Listening — speak naturally', speaking:'Your AI assistant is speaking', ended:'Session ended', error:'Connection needs attention'})[status];
   return <div className="voice-card" id="live-demo">
-    <div className="voice-card-top"><span className="online-dot" /> <span>PARAmBA QUANTUM · AI VOICE</span><span className="live-pill">LIVE DEMO</span></div>
+    <div className="voice-card-top"><span className="online-dot" /> <span>PARAMBA QUANTUM · AI VOICE</span><span className="live-pill">LIVE DEMO</span></div>
     <h3>Talk to our AI assistant</h3>
     <p className="voice-intro">Experience a real conversation with an AI voice agent — right here in your browser.</p>
     <div className={`mic-stage ${active ? 'is-active' : ''} ${status === 'speaking' ? 'is-speaking' : ''}`}>
