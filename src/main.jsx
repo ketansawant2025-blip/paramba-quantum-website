@@ -70,6 +70,47 @@ function VoiceDemo() {
     <div className="voice-card-top"><span className="online-dot" /> <span>PARAmBA QUANTUM · AI VOICE</span><span className="live-pill">LIVE DEMO</span></div>
     <h3>Talk to our AI assistant</h3>
     <p className="voice-intro">Experience a real conversation with an AI voice agent — right here in your browser.</p>
+    <div style={{
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '12px',
+  margin: '24px auto'
+}}>
+  <img
+    src="/Gemini_Generated_Image_ayw7nnayw7nnayw7.png"
+    alt="Nisha - Paramba Quantum AI Assistant"
+    style={{
+      width: '190px',
+      height: '220px',
+      objectFit: 'cover',
+      objectPosition: 'center 20%',
+      borderRadius: '24px',
+      border: '3px solid #dceaff',
+      boxShadow: status === 'speaking'
+        ? '0 0 25px rgba(20,120,255,0.55)'
+        : '0 5px 20px rgba(0,0,0,0.10)',
+      transition: 'all 0.3s ease'
+    }}
+  />
+  <div style={{textAlign: 'center'}}>
+    <strong style={{fontSize: '20px'}}>Nisha</strong>
+    <div style={{fontSize: '13px', color: '#64748b'}}>
+      Your AI Business Assistant
+    </div>
+    <div style={{
+      fontSize: '13px',
+      color: status === 'speaking' ? '#2563eb' : '#16a34a',
+      marginTop: '5px'
+    }}>
+      {status === 'speaking' ? '● Speaking...' :
+       status === 'listening' ? '● Listening...' :
+       status === 'connecting' ? '● Connecting...' :
+       status === 'error' ? '● Connection error' :
+       '● Ready to assist'}
+    </div>
+  </div>
+</div>
     <div className={`mic-stage ${active ? 'is-active' : ''} ${status === 'speaking' ? 'is-speaking' : ''}`}>
       <div className="soundbars left-bars"><i/><i/><i/><i/><i/></div>
       <div className="mic-orbit"><div className="mic-button"><Mic size={34} strokeWidth={2.2}/></div></div>
