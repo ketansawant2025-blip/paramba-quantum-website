@@ -2,39 +2,44 @@
 @media(max-width:980px){.nav{gap:15px}.nav-cta{display:none}.hero-content{gap:15px}.demo-layout{gap:35px}.about-grid,.why-grid{gap:50px}.contact-grid{gap:45px}}
 @media(max-width:760px){.container{width:min(100% - 34px,560px)}.header{height:76px}.brand img{width:190px;height:62px}.mobile-menu{display:block}.nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 24px 24px;border-bottom:1px solid var(--line);box-shadow:0 16px 25px #12375c12;align-items:stretch;gap:0}.nav.open{display:flex;flex-direction:column}.nav a{padding:13px 0;border-bottom:1px solid #edf2f8}.hero{padding:65px 0 70px}.hero-content{grid-template-columns:1fr}.hero h1{font-size:43px;letter-spacing:-1.7px}.hero-lede{font-size:16px}.hero-visual{min-height:390px;margin-top:8px}.hero-visual-card{transform:scale(.9)}.chip-one{right:0}.chip-two{left:0}.trust-inner{justify-content:center;flex-wrap:wrap}.trust-inner>span{width:100%;text-align:center}.trust-inner div{font-size:10px}.section{padding:70px 0}.about-grid,.demo-layout,.why-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.section-heading{display:block}.section-heading>p{margin-top:18px}.service-grid{grid-template-columns:1fr 1fr}.service-card{padding:21px;min-height:255px}.service-card h3{font-size:16px}.demo-section{padding:70px 0}.demo-copy h2{font-size:37px}.voice-card{padding:24px 18px}.work-card{grid-template-columns:1fr}.work-art{min-height:250px}.work-info{padding:30px}.why-section{padding:70px 0}.cta-inner{align-items:flex-start;flex-direction:column}.cta-band h2{font-size:31px}.contact-form{padding:22px}.footer-main{grid-template-columns:1fr 1fr;gap:30px}.footer-brand{grid-column:1/-1}.footer-bottom{gap:10px;flex-direction:column}}
 @media(max-width:420px){.service-grid{grid-template-columns:1fr}.service-card{min-height:215px}.hero h1{font-size:38px}.hero-actions .button{width:100%}.hero-proof{gap:10px;display:grid}.voice-foot{flex-direction:column;align-items:center}.form-row{grid-template-columns:1fr}.hero-visual{transform:scale(.92);margin-left:-10px;margin-right:-10px}}
-/* Animated blue border for Try Live AI Demo */
+
+/* PARAMBA QUANTUM - Outside Animated Blue Border */
 
 .hero-actions .button-outline {
   position: relative;
   isolation: isolate;
-  border: 1px solid #cbdcf1;
-  background: #fff;
-  overflow: hidden;
+  overflow: visible !important;
+  z-index: 1;
 }
 
 .hero-actions .button-outline::before {
   content: "";
   position: absolute;
-  inset: 0;
+  inset: -4px;
   border-radius: inherit;
   padding: 2px;
+
   background: conic-gradient(
+    from 0deg,
     transparent 0deg,
-    transparent 270deg,
-    #1265e8 310deg,
-    #28b8ee 340deg,
+    transparent 285deg,
+    #1265e8 315deg,
+    #13b8ff 340deg,
     transparent 360deg
   );
+
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  animation: pq-border-spin 2s linear infinite;
+
+  animation: pq-outside-spin 2.5s linear infinite;
   pointer-events: none;
+  z-index: 2;
 }
 
-@keyframes pq-border-spin {
+@keyframes pq-outside-spin {
   to {
     transform: rotate(360deg);
   }
