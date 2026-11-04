@@ -2,3 +2,95 @@
 @media(max-width:980px){.nav{gap:15px}.nav-cta{display:none}.hero-content{gap:15px}.demo-layout{gap:35px}.about-grid,.why-grid{gap:50px}.contact-grid{gap:45px}}
 @media(max-width:760px){.container{width:min(100% - 34px,560px)}.header{height:76px}.brand img{width:190px;height:62px}.mobile-menu{display:block}.nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:20px 24px 24px;border-bottom:1px solid var(--line);box-shadow:0 16px 25px #12375c12;align-items:stretch;gap:0}.nav.open{display:flex;flex-direction:column}.nav a{padding:13px 0;border-bottom:1px solid #edf2f8}.hero{padding:65px 0 70px}.hero-content{grid-template-columns:1fr}.hero h1{font-size:43px;letter-spacing:-1.7px}.hero-lede{font-size:16px}.hero-visual{min-height:390px;margin-top:8px}.hero-visual-card{transform:scale(.9)}.chip-one{right:0}.chip-two{left:0}.trust-inner{justify-content:center;flex-wrap:wrap}.trust-inner>span{width:100%;text-align:center}.trust-inner div{font-size:10px}.section{padding:70px 0}.about-grid,.demo-layout,.why-grid,.contact-grid{grid-template-columns:1fr;gap:35px}.section-heading{display:block}.section-heading>p{margin-top:18px}.service-grid{grid-template-columns:1fr 1fr}.service-card{padding:21px;min-height:255px}.service-card h3{font-size:16px}.demo-section{padding:70px 0}.demo-copy h2{font-size:37px}.voice-card{padding:24px 18px}.work-card{grid-template-columns:1fr}.work-art{min-height:250px}.work-info{padding:30px}.why-section{padding:70px 0}.cta-inner{align-items:flex-start;flex-direction:column}.cta-band h2{font-size:31px}.contact-form{padding:22px}.footer-main{grid-template-columns:1fr 1fr;gap:30px}.footer-brand{grid-column:1/-1}.footer-bottom{gap:10px;flex-direction:column}}
 @media(max-width:420px){.service-grid{grid-template-columns:1fr}.service-card{min-height:215px}.hero h1{font-size:38px}.hero-actions .button{width:100%}.hero-proof{gap:10px;display:grid}.voice-foot{flex-direction:column;align-items:center}.form-row{grid-template-columns:1fr}.hero-visual{transform:scale(.92);margin-left:-10px;margin-right:-10px}}
+
+
+/* =========================================================
+   PARAMBA QUANTUM — STAGE 1 PREMIUM VISUAL REFINEMENT
+   Safe overrides: existing React structure and functionality
+   remain unchanged.
+   ========================================================= */
+
+:root {
+  --navy: #12315b;
+  --blue: #155eef;
+  --cyan: #13b8a6;
+  --gold: #f5c542;
+  --muted: #64748b;
+  --pale: #f4f8ff;
+  --line: #e5edf7;
+}
+
+body {
+  color: #17345d;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  color: #12315b;
+  background: #dceaff;
+}
+
+.header {
+  height: 86px;
+  background: rgba(255, 255, 255, .96);
+  border-bottom-color: rgba(219, 231, 246, .8);
+  box-shadow: 0 5px 24px rgba(20, 55, 100, .035);
+}
+
+.brand img {
+  width: 230px;
+  transition: transform .2s ease;
+}
+.brand:hover img { transform: translateY(-1px); }
+
+.nav {
+  gap: 25px;
+  font-size: 13px;
+  color: #405675;
+}
+.nav a { position: relative; }
+.nav a:not(:has(svg))::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -7px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--blue);
+  transition: right .2s ease;
+}
+.nav a:hover::after { right: 0; }
+
+.button {
+  padding: 14px 22px;
+  font-size: 13px;
+  letter-spacing: .1px;
+}
+.button-primary {
+  background: linear-gradient(115deg, #2878f4, #1553d5);
+  box-shadow: 0 9px 22px rgba(21, 94, 239, .19);
+}
+.button-primary:hover {
+  box-shadow: 0 13px 28px rgba(21, 94, 239, .25);
+}
+.button-yellow {
+  background: #f5c542;
+  box-shadow: 0 8px 20px rgba(245, 197, 66, .2);
+}
+.button-outline {
+  border-color: #d4e1f1;
+}
+.button-outline:hover {
+  border-color: #9bbdf0;
+  background: #f8fbff;
+}
+
+.hero {
+  padding: 88px 0 82px;
+  background:
+    radial-gradient(ellipse at 85% 48%, rgba(193, 222, 255, .38), transparent 38%),
+    linear-gradient(120deg, #fff 10%, #f7faff 66%, #f0f6ff);
+}
+.hero-grid {
