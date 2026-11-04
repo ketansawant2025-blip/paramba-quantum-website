@@ -91,6 +91,68 @@ body {
   padding: 88px 0 82px;
   background:
     radial-gradient(ellipse at 85% 48%, rgba(193, 222, 255, .38), transparent 38%),
+     
+/* PARAMBA QUANTUM - Animated Live Demo Border */
+
+.hero-actions a.button-outline {
+  position: relative;
+  isolation: isolate;
+  border: 1px solid #cbdcf1;
+  background: #ffffff;
+  overflow: visible;
+  z-index: 1;
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+
+.hero-actions a.button-outline::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 270deg,
+    #1265e8 300deg,
+    #28b8ee 330deg,
+    #ffffff 345deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: pqDemoBorder 2.5s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-actions a.button-outline > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-actions a.button-outline {
+  box-shadow: 0 0 12px rgba(18, 101, 232, .12);
+}
+
+.hero-actions a.button-outline:hover {
+  box-shadow: 0 0 22px rgba(18, 101, 232, .3);
+}
+
+@keyframes pqDemoBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-actions a.button-outline::before {
+    animation: none;
+  }
+}
+
     linear-gradient(120deg, #fff 10%, #f7faff 66%, #f0f6ff);
 }
 .hero-grid {
