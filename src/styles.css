@@ -65,3 +65,78 @@
 .nisha-status.listening {
   color: #0891b2;
 }
+/* NISHA FACIAL ANIMATIONS */
+
+.nisha-avatar {
+  position: relative;
+}
+
+.nisha-face-effects {
+  position: absolute;
+  width: 230px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+/* Eye blinking */
+.nisha-eye {
+  position: absolute;
+  width: 22px;
+  height: 12px;
+  top: 38%;
+  border-radius: 50%;
+  background: #5deaff;
+  box-shadow: 0 0 9px #00bfff;
+  opacity: 0;
+  animation: nishaBlink 4s infinite;
+}
+
+.left-eye {
+  left: 43%;
+}
+
+.right-eye {
+  left: 64%;
+}
+
+@keyframes nishaBlink {
+  0%, 90%, 100% {
+    opacity: 0;
+    transform: scaleY(1);
+  }
+  93%, 96% {
+    opacity: 1;
+    transform: scaleY(0.15);
+  }
+}
+
+/* Mouth movement while speaking */
+.nisha-mouth {
+  position: absolute;
+  left: 48%;
+  top: 47%;
+  width: 20px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ff4d91;
+  opacity: 0;
+}
+
+.nisha-mouth.mouth-talking {
+  opacity: 1;
+  animation: nishaTalk 0.22s infinite alternate;
+}
+
+@keyframes nishaTalk {
+  from {
+    height: 4px;
+    transform: scaleX(1);
+  }
+  to {
+    height: 15px;
+    transform: scaleX(1.25);
+  }
+}
