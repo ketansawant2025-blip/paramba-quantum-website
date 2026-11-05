@@ -70,25 +70,28 @@ function VoiceDemo() {
     <div className="voice-card-top"><span className="online-dot" /> <span>PARAMBA QUANTUM · AI VOICE</span><span className="live-pill">LIVE DEMO</span></div>
     <h3>Talk to our AI assistant</h3>
     <p className="voice-intro">Experience a real conversation with an AI voice agent — right here in your browser.</p>
-    <div className="nisha-avatar">
+<div className="nisha-avatar">
   <div
-  className={`nisha-sprite ${
-    status === 'speaking' ? 'nisha-speaking' :
-    status === 'listening' ? 'nisha-listening' :
-    'nisha-idle'
-  }`}
-  role="img"
-  aria-label="Nisha AI Assistant"
-/>
- </div><div className={`nisha-status ${
+    className={`nisha-sprite ${
+      status === 'speaking' ? 'nisha-speaking' :
+      status === 'listening' ? 'nisha-listening' :
+      'nisha-idle'
+    }`}
+    role="img"
+    aria-label="Nisha AI Assistant"
+  />
+
+  <div className={`nisha-status ${
     status === 'speaking' ? 'speaking' :
     status === 'listening' ? 'listening' : ''
   }`}>
-    {status === 'speaking' ? '● Nisha is speaking' :
-     status === 'listening' ? '● Nisha is listening' :
-     '● Nisha is ready'}
+    {status === 'speaking' ? '• Nisha is speaking' :
+     status === 'listening' ? '• Nisha is listening' :
+     '• Nisha is ready'}
   </div>
-</div><div className={`mic-stage ${active ? 'is-active' : ''} ${status === 'speaking' ? 'is-speaking' : ''}`}>
+</div>
+
+<div className={`mic-stage ${active ? 'is-active' : ''} ${status === 'speaking' ? 'is-speaking' : ''}`}>
       <div className="soundbars left-bars"><i/><i/><i/><i/><i/></div>
       <div className="mic-orbit"><div className="mic-button"><Mic size={34} strokeWidth={2.2}/></div></div>
       <div className="soundbars right-bars"><i/><i/><i/><i/><i/></div>
