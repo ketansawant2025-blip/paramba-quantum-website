@@ -79,13 +79,7 @@ function VoiceDemo() {
       status === 'listening' ? 'robot-listening' : ''
     }`}
   />
-  <div className="nisha-face-effects">
-  <span className="nisha-eye left-eye"></span>
-  <span className="nisha-eye right-eye"></span>
-  <span className={`nisha-mouth ${
-    status === 'speaking' ? 'mouth-talking' : ''
-  }`}></span>
-</div><div className={`nisha-status ${
+ </div><div className={`nisha-status ${
     status === 'speaking' ? 'speaking' :
     status === 'listening' ? 'listening' : ''
   }`}>
