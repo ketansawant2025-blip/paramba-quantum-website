@@ -140,3 +140,46 @@
     transform: scaleX(1.25);
   }
 }
+/* NISHA SPRITE ANIMATION */
+
+.nisha-sprite {
+  width: 230px;
+  height: 230px;
+  max-width: 80vw;
+  margin: 10px auto;
+  background-image: url('/assets/nisha-sprites.png');
+  background-repeat: no-repeat;
+  background-size: 400% 200%;
+  background-position: 0% 0%;
+  animation: nishaFloat 3s ease-in-out infinite,
+             nishaIdleBlink 4s steps(1) infinite;
+}
+
+/* Idle: open eyes and blink */
+@keyframes nishaIdleBlink {
+  0%, 85%, 100% { background-position: 0% 0%; }
+  90% { background-position: 33.333% 0%; }
+  95% { background-position: 66.666% 0%; }
+}
+
+/* Speaking: mouth movement */
+.nisha-speaking {
+  animation: nishaFloat 3s ease-in-out infinite,
+             nishaTalkFrames 0.5s steps(1) infinite;
+}
+
+@keyframes nishaTalkFrames {
+  0% { background-position: 100% 0%; }
+  50% { background-position: 0% 100%; }
+}
+
+/* Listening: gentle head movement */
+.nisha-listening {
+  animation: nishaFloat 3s ease-in-out infinite,
+             nishaListenFrames 2s steps(1) infinite;
+}
+
+@keyframes nishaListenFrames {
+  0%, 50% { background-position: 66.666% 100%; }
+  50.1%, 100% { background-position: 100% 100%; }
+}
