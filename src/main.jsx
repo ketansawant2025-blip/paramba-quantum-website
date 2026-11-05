@@ -71,14 +71,15 @@ function VoiceDemo() {
     <h3>Talk to our AI assistant</h3>
     <p className="voice-intro">Experience a real conversation with an AI voice agent — right here in your browser.</p>
     <div className="nisha-avatar">
-  <img
-    src="/assets/nisha-character.png"
-    alt="Nisha AI Assistant"
-    className={`nisha-robot ${
-      status === 'speaking' ? 'robot-speaking' :
-      status === 'listening' ? 'robot-listening' : ''
-    }`}
-  />
+  <div
+  className={`nisha-sprite ${
+    status === 'speaking' ? 'nisha-speaking' :
+    status === 'listening' ? 'nisha-listening' :
+    'nisha-idle'
+  }`}
+  role="img"
+  aria-label="Nisha AI Assistant"
+/>
  </div><div className={`nisha-status ${
     status === 'speaking' ? 'speaking' :
     status === 'listening' ? 'listening' : ''
