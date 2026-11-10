@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import Vapi from '@vapi-ai/web';
 import { ArrowUpRight, Bot, BrainCircuit, CheckCircle2, ChevronDown, Clock3, Code2, Globe2, Headphones, Mail, Menu, Mic, Phone, Play, Send, ShieldCheck, Sparkles, Workflow, X, Zap } from 'lucide-react';
 import './styles.css';
+import ParambaChat from './src/ParambaChat.jsx';
 
 const services = [
   { icon: Bot, title: 'AI Voice Agents', text: 'Always-on AI receptionists and sales assistants that answer questions, qualify enquiries and help customers take the next step.' },
@@ -138,6 +139,7 @@ function App() {
       </div></section>
     </main>
     <footer className="footer"><div className="container footer-main"><div className="footer-brand"><img src="/assets/paramba-quantum-logo.png" alt="Paramba Quantum logo"/><p>Powering Businesses with AI Innovation.</p></div><div><b>Explore</b><a href="#about">About</a><a href="#services">Services</a><a href="#live-demo">Live Demo</a><a href="#work">Our Work</a></div><div><b>Connect</b><a href="https://wa.me/919833010399" target="_blank" rel="noreferrer">WhatsApp</a><a href="#contact">Contact</a></div></div><div className="container footer-bottom"><span>© {new Date().getFullYear()} Paramba Quantum. All rights reserved.</span><span>Technology · AI · Innovation</span></div></footer>
+ <ParambaChat />
   </>;
 }
 
