@@ -128,3 +128,19 @@
   line-height: 1.35 !important;
   margin: 0 !important;
 }
+/* REMOVE ALL CHAT HEADER LOGO ELEMENTS */
+#n8n-chat .chat-header::before,
+#n8n-chat .chat-header::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    background-image: none !important;
+}
+
+#n8n-chat .chat-header {
+    background-image: none !important;
+}
+
+#n8n-chat .chat-header img {
+    display: none !important;
+}
