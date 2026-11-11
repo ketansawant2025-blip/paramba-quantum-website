@@ -1,5 +1,23 @@
 
-/* PARAMBA QUANTUM CHATBOT BRAND THEME */
+/* PARAMBA QUANTUM LOGO */
+
+#n8n-chat .chat-layout .chat-header {
+  background-color: #12315b !important;
+  background-image: none !important;
+}
+
+#n8n-chat .chat-layout .chat-header::before {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 65px;
+  flex-shrink: 0;
+  background-image: url('/paramba-quantum-logo.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 14px;
+}
 
 :root {
   --chat--color-primary: #12315b;
