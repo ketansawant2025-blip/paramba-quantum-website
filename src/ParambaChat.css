@@ -81,3 +81,16 @@
     --chat--window--height: 80vh;
   }
 }
+/* PARAMBA QUANTUM CHAT HEADER LOGO */
+
+.chat-header {
+  position: relative;
+  padding-left: 85px !important;
+  min-height: 90px;
+  background-image: url('/paramba-quantum-logo.png');
+  background-repeat: no-repeat;
+  background-position: 18px center;
+  background-size: 58px 58px;
+  background-color: #12315b !important;
+  color: #ffffff !important;
+}
