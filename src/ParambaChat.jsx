@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import '@n8n/chat/style.css';
+import './ParambaChat.css';
 import { createChat } from '@n8n/chat';
 
 export default function ParambaChat() {
