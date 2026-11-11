@@ -1,0 +1,83 @@
+
+/* PARAMBA QUANTUM CHATBOT BRAND THEME */
+
+:root {
+  --chat--color-primary: #12315b;
+  --chat--color-primary-shade-50: #155eef;
+  --chat--color-primary-shade-100: #0d2445;
+
+  --chat--color-secondary: #13b8a6;
+  --chat--color-secondary-shade-50: #0fa493;
+
+  --chat--color-white: #ffffff;
+  --chat--color-light: #f4f8ff;
+  --chat--color-light-shade-50: #e5edf7;
+  --chat--color-light-shade-100: #d5e1f0;
+
+  --chat--color-dark: #12315b;
+  --chat--color-medium: #64748b;
+  --chat--color-disabled: #94a3b8;
+
+  --chat--font-family: 'DM Sans', sans-serif;
+  --chat--border-radius: 14px;
+  --chat--spacing: 1rem;
+
+  --chat--window--width: 400px;
+  --chat--window--height: 600px;
+  --chat--window--border-radius: 16px;
+  --chat--window--z-index: 9999;
+
+  --chat--message--bot--background: #f4f8ff;
+  --chat--message--bot--color: #12315b;
+  --chat--message--user--background: #155eef;
+  --chat--message--user--color: #ffffff;
+
+  --chat--toggle--background: #12315b;
+  --chat--toggle--hover--background: #155eef;
+  --chat--toggle--active--background: #13b8a6;
+  --chat--toggle--color: #ffffff;
+  --chat--toggle--size: 64px;
+
+  --chat--header--background: #12315b;
+  --chat--header--color: #ffffff;
+  --chat--header--padding: 20px;
+
+  --chat--body--background: #ffffff;
+  --chat--footer--background: #ffffff;
+  --chat--footer--color: #12315b;
+
+  --chat--input--background: #ffffff;
+  --chat--input--text-color: #12315b;
+  --chat--input--border: 1px solid #d5e1f0;
+  --chat--input--border-active: 1px solid #13b8a6;
+  --chat--input--send--button--color: #155eef;
+}
+
+/* Header styling */
+.chat-header {
+  background: #12315b !important;
+  color: #ffffff !important;
+}
+
+/* Chat messages */
+.chat-message-from-bot {
+  border: 1px solid #e5edf7;
+}
+
+/* Input area */
+.chat-input {
+  border-top: 2px solid #13b8a6;
+}
+
+/* Send button */
+.chat-input-send-button {
+  color: #155eef !important;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  :root {
+    --chat--window--width: 100%;
+    --chat--window--height: 80vh;
+  }
+}
